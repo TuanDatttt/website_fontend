@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background : -webkit-linear-gradient(left,#a445b2,#fa4299);
+}
+/* Common */
+.invalid > span{
+    color : red;
+}
+.margin-8{
+    margin: 8px;
+}
+
+/* Body */
+.wapper{
+    overflow: hidden;
+    max-width: 390px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.8);
+}
+.wapper .title-text{
+    display: flex;
+    width: 200%;
+}
+.wapper .title-text .title{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+.wapper .form-container{
+    width: 100%;
+    overflow: hidden;
+}
+.form-container .slide-control{
+    position: relative;
+    width: 100%;
+    margin: 30px 0 10px 0;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    justify-content: space-between;
+    overflow: hidden;
+    display: flex;
+
+}
+.slide-control .slide{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+
+}
+.slide-control .slide-table{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background : -webkit-linear-gradient(left,#a445b2,#fa4299);
+}
+.slide-control .login {
+    color: #fff;
+}
+input[type="radio"]{
+    display: none;
+}
+#signup:checked ~ .slide-table {
+    left: 50%;
+
+}
+#signup:checked ~ .login{
+    color: #000;
+}
+#signup:checked ~ .signup {
+    color:#fff;
+
+}
+.form-container .form-inner{
+    display: flex;
+    width: 200%;
+
+}
+.form-container .form-inner form{
+    width: 50%;
+}
+.form-container .form-inner form .form-group{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    z-index: 0;
+}
+.form-inner form .form-group input{
+    width: 100%;
+    height: 100%;
+    padding: 12px 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 0;
+}
+.form-label{
+    color:#000;
+}
+/* thẻ focus màu cho input khi click chuột vào */
+.form-inner form .form-group input:focus{
+    border-color: #fc83bb;
+}
+form .form-group input[type="submit"]{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
+    background : -webkit-linear-gradient(left,#a445b2,#fa4299);
+}
+.pass-link{
+    padding: 10px 2px;
+    text-align: right;
+}
+.signup-link{
+    padding: 12px 2px;
+    text-align: center;
+}
+.pass-link,
+.signup-link{
+    margin-top: 10px;
+}
+.pass-link a,
+.signup-link a{
+    color: #fa4299;
+    text-decoration: none;
+}
+.pass-link a:hover,
+.signup-link a:hover{
+    cursor: pointer;
+    text-decoration: underline ;
+
+}
+.title-close{
+    width: 100%;
+}
+.title-close > a {
+    float : right;
+    text-decoration: none;
+}
+.eye {
+    right: 6px;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+
+}
+.eye i{
+    font-size: 24px;
+}
+

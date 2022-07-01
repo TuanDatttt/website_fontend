@@ -1,0 +1,102 @@
+/* Giao diện PC */
+@media (min-width: 64em){
+    #header .search-btn{
+        display: block;
+    }
+}/* Giao diện Tablet */
+@media (max-width:63.9375em){
+    #header .search-btn{
+        display: block;
+    }
+    #nav .subnav  a{
+        padding: 4px 16px;
+    }  
+    .contact-info {
+        font-size: 24px;
+        line-height: 2.0;
+    } 
+    .contact-form .form-control{
+        padding: 15px;
+    }
+
+    #footer .social{
+        font-size: 48px;
+    }
+   
+    #footer .social a{
+        margin: 0 8px ;
+    }
+    #footer .copy-right a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+}
+/* Giao diện Mobile */
+@media (max-width:46.25em){
+    /* Dùng chung */
+    
+    /* coll cột */
+    .s-full-width,
+    .s-coll-full{
+        width: 100%;
+    }
+
+    /* website */
+    #header{
+        overflow: hidden;
+    }
+    #header .search-btn{
+        display: none;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+    #nav {
+        display: block;
+    }
+
+    #nav li{
+        display: block;
+    }
+    #nav > li:first{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav  a{
+        color: #fff;
+        padding: 4px 40px;
+    }
+    
+    /* Band */
+    #content .member-name{
+        margin-bottom: 10px;
+    }
+    #content .member-img{
+        width: 60%; 
+    }
+    /* Tour */
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+    /* Contact */
+    #contact .contact-form{
+        margin-top: 16px;
+    }
+    #contact .media-contact-input{
+        margin-top: 8px;
+    }
+    .contact-info {
+        font-size: 24px;
+        line-height: 2.0;
+    } 
+    
+
+
+ 
+
+    
+}

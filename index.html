@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/bubbles/344/imgur.png">
+    <title>The Band</title>
+</head>
+<body>
+    <!-- Giao diện bao hàm của Website -->
+   <div id="main">
+    <!-- Giao diện header -->
+    <div id="header">
+        <!-- Begin nav -->
+        <ul id="nav" >
+            <li ><a  class="tuandat" href="#">Home</a></li>
+            <li><a class="tuandat" href="#tour">Tour</a></li>
+            <li><a class="tuandat" href="#contact">Contact</a></li>
+            <li><a class="tuandat" href="./form-login.html">Login</a></li>
+
+            <li>
+                <a value="more" class="tuandat" href="#">More
+                    <i class="nav-arrow-down ti-angle-down"></i>
+                </a>
+                <ul  class="subnav">
+                    <li><a class="tuandat" href="#">Merchandise</a></li>
+                    <li><a class="tuandat" href="#">Extras</a></li>
+                    <li><a class="tuandat" href="#">Media</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <div class="search-btn">
+            <i class="search-icon ti-search">
+            </i>
+        </div>
+        <div id="menu-mobile" class="mobile-menu-btn js-mobile-menu">
+            <i class="menu-icon ti-menu"></i>
+        </div>
+
+
+        <!-- End : nav -->
+        <!-- Begin : Search -->
+
+    </div>
+    <!-- Giao diện Slider -->
+    <div id="slider">
+        <img src="./assets/img/chicago.jpeg" style="width:100%;">
+        <div class="text-content">
+            <div class="text-heading">NEW YORK</div>
+            <div class="text-discription">The atmosphere in New York is lorem ipsum.
+            </div>
+        </div>
+    </div>
+    <!-- Giao diện chứa nội dụng -->
+    <div id="content">
+        <!-- About Section -->
+        <div id="band" class="content-section">
+            <h2 class="section-heading">THE BAND</h2>
+            <p class="section-sub-heading">We love Music</p>
+            <p class="about-theband">We have created a fictional band website.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="row member-list">
+            <div class="col col-3 text-center s-coll-full ">
+                <p class="member-name">Name</p>
+                <img class="member-img" alt="Name" src="./assets/img/band/member1.jpeg" alt="">
+            </div>
+            <div class="col col-3 text-center s-coll-full ">
+                <p class="member-name">Name</p>
+                <img class="member-img" alt="Name" src="./assets/img/band/member1.jpeg" alt="">
+            </div>
+            <div class="col col-3 text-center s-coll-full ">
+                <p class="member-name">Name</p>
+                <img class="member-img" alt="Name" src="./assets/img/band/member1.jpeg" alt="">
+            </div>
+        </div>
+        </div>
+
+        <!-- Tuor Section -->
+        <div id="tour" class="tour-section">
+            <div class="content-section">
+                <h2 class="section-heading text-white">TOUR DATES</h2>
+                <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                <ul class="tickets-list" >
+                    <li>September <span class="sold-out">Sold out</span></li>
+                    <li>October <span class="sold-out">Sold out</span></li>
+                    <li>November <span class="quantity">3</span></li>
+                </ul>
+                <div class="row places-list">
+                    <div class="col col-3 mt-16 s-coll-full ">
+                        <img src="./assets/img/tour/newyork.jpeg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading ">New York</h3>
+                        <p class="place-time">Fri 27 Nov 2016</p>
+                        <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                    </div>
+
+                    <div class="col col-3 mt-16 s-coll-full">
+                        <img src="./assets/img/tour/paris.jpeg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading">Paris</h3>
+                        <p class="place-time">Sat 28 Nov 2016</p>
+                        <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                    </div>
+
+                    <div class="col col-3 mt-16 s-coll-full">
+                        <img src="./assets/img/tour/sanfran.jpeg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading">San Francisco</h3>
+                        <p class="place-time">Sun 29 Nov 2016</p>
+                        <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <div id="contact" class="content-section">
+            <h2 class="section-heading">CONTACT</h2>
+            <p class="section-sub-heading">Fan? Drop a note!</p>
+        <div class="row contact-content">
+            <div class="col col-2 s-coll-full contact-info">
+                <p><i class="ti-location-pin"></i>Chicago</p>
+                <p><i class="ti-mobile"></i>Phone: +<a href="#">00 15151</a></p>
+                <p><i class="ti-email"></i>Email: <a href="#">mail@mail.com</a></p>
+            </div>
+            <div class="col col-2 s-coll-full contact-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col col-2 s-coll-full media-contact-input">
+                                <input type="text" name="" id="" class="form-control" required placeholder="Name">
+                            </div>
+                            <div class="col col-2 s-coll-full media-contact-input">
+                                <input type="text" name="" id="" class="form-control" required placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row mt-8">
+                            <div class="col col-full">
+                                <input type="text" name="" id="" class="form-control" required placeholder="Massage">
+                            </div>
+                        </div>
+                        <input class="btn pull-right s-full-width mt-16" type="submit" value="Send">
+                    </form>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <div class="map-section">
+        <img src="./assets/img/map.jpeg" alt="Map" style="width:100%">
+    </div>
+    <!-- Giao diện footer -->
+    <div id="footer">
+        <div class="social">
+            <a href=""><i class="ti-facebook"></i></a>
+            <a href=""><i class="ti-instagram"></i></a>
+            <a href=""><i class="ti-youtube"></i></a>
+            <a href=""><i class="ti-pinterest"></i></a>
+            <a href=""><i class="ti-twitter"></i></a>
+            <a href=""><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="copy-right">Power by <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm">w3.css</a></p>
+    </div>
+
+    <!-- Giao diện Modal của JS -->
+    <div class="modal js-modal ">
+        <div class="modal-container js-modal-container">
+            <!-- Modal close -->
+            <div class="modal-close">
+            <i id="buy-icon" class="modal-icon ti-close js-modal-close buy-icon"></i>
+            </div>
+             <!-- Modal header -->
+            <header class="modal-header">
+                <i class="modal-icon ti-bag"></i>Tickets
+            </header>
+            <!-- Modal body -->
+            <div class="modal-body">
+            <label for="lbmodal-quantity" class="model-label">
+                <i class="modal-icon ti-shopping-cart"></i>
+                Tickets, $15 per person
+            </label>
+            <input id="lbmodal-quantity" class="modal-input" type="text" placeholder="How many ?">
+            <label for="lbmodal-email" class="model-label">
+                <i class="modal-icon ti-user"></i>
+                Send to
+            </label>
+            <input id="lbmodal-email" class="modal-input" type="text" placeholder="Enter email ...">
+
+            <button id="buy-tickets" type="">
+                Pay
+                <i class="modal-icon ti-check"></i>
+            </button>
+            </div>
+            <!-- Modal footer -->
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="#">help?</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="./assets/js/main.js"></script>     -->
+
+   <!-- sử dùng js để xử lý hiện thị ẩn giao diện modal với addEventlistener('click') -->
+   <script>
+    // Lấy ra tất cả class có tên là js-buy-ticket và được luu buyBtns
+    const buyBtns = document.querySelectorAll('.js-buy-ticket');
+    // lấy class lưu vào js
+    const modal = document.querySelector('.js-modal');
+    const modalLogin = document.querySelector('.js-modal-login');
+    const modalRegis = document.querySelector('.js-modal-regis');
+
+    // lấy class js-modal-container
+    const modalContainer  = document.querySelector('.js-modal-container')
+    // lay js-modal-clode
+    const modalCloses = document.querySelectorAll('.js-modal-close');
+    // console.log(modalCloses);
+    // tạo hàm là function show modal js
+    function showBuyTicket() {
+        modal.classList.add('open');
+    }
+    // tao function remove class
+    function removeBuyTicket() {
+        return modal.classList.remove('open');
+
+    }
+    // tạo function remove khi click vào giao diện thừa modal
+    function removeModal(event){
+        event.stopPropagation();
+    }
+
+    // Vòng lặp js
+    for(const buyBtn of buyBtns){
+        // lắng nghe sự kiện là addEventLisner('sự kiến', xử lý chức năng)
+        buyBtn.addEventListener('click',showBuyTicket);
+    }
+
+    for(var i=0 ;i<modalCloses.length;i++){
+        var closeIcon = modalCloses[i];
+
+        closeIcon.onclick = function(){
+            var iconBuy = this.classList.contains('buy-icon');
+            var iconLogin = this.classList.contains('login-icon')
+            if(iconBuy){
+                modal.classList.remove('open');
+            }
+            else if(iconLogin){
+                modalLogin.classList.remove('open');
+            }else{
+                modalRegis.classList.remove('open')
+            }
+        }
+    }
+
+    modal.addEventListener('click',removeBuyTicket);
+    modalContainer.addEventListener('click',removeModal);
+
+    // lay js-mobile-menu
+    </script>
+    <!-- Dùng đề tạo header bằng javascript mobile -->
+    <script>
+        // lấy id header
+            var header = document.getElementById('header');
+        // lấy chiều cao header
+            var headerHeight = header.clientHeight;
+            // lấy id menu-mobile
+            var menuMobile = document.getElementById('menu-mobile');
+            // Đóng/mở menu
+            menuMobile.onclick = function(){
+                var isClose = header.clientHeight === headerHeight ;
+                if(isClose){
+                    header.style.height = 'auto';
+                }else{
+                    header.style.height = null;
+                }
+            }
+
+            // Tự động đóng khi chọn menu
+            // lấy tất cả thẻ trong nav li a có href là #
+            menuItemList = document.querySelectorAll('#nav li a[class*="tuandat"]');
+            for(var i=0;i < menuItemList.length ; i++){
+                var menuItem = menuItemList[i];
+
+                menuItem.onclick = function(event){
+                    // nextElementSibling lấy cái class liền kề
+                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                    if(!isParentMenu){
+                    header.style.height = null;
+                    }else{
+                        event.preventDefault();
+                    }
+
+                }
+            }
+    </script>
+
+    <!-- Modal Login -->
+    <script>
+            const btnLogins = document.querySelectorAll('.js-btn-login');
+            const modalFormLogin = document.querySelector('.js-modal-form');
+
+            function showLogin(){
+                modalLogin.classList.add('open');
+                modal.classList.remove('open');
+                modalRegis.classList.remove('open');
+
+            }
+            // tao function remove class
+            function removeFormLogin() {
+                modalLogin.classList.remove('open');
+
+            }
+            function stopFormLogin(event){
+                event.stopPropagation();
+            }
+            for(const btnLogin of btnLogins){
+            btnLogin.addEventListener('click',showLogin);
+            }
+
+
+    </script>
+
+    <script>
+        const btnRegs = document.querySelectorAll('.js-btn-regis');
+        const modalFormRegis = document.querySelector('.js-modal-form-regis');
+
+        function showRegis(){
+            modalRegis.classList.add('open');
+            modal.classList.remove('open');
+            modalLogin.classList.remove('open');
+        }
+        function removeRegis(){
+            modalRegis.classList.remove('open');
+        }
+        function stopFormRegis(event){
+            event.stopPropagation();
+        }
+        for(const btnReg of btnRegs ){
+        btnReg.addEventListener('click',showRegis);
+        }
+    </script>
+    <script>
+        var  iconEyes= document.querySelectorAll('.ti-eye');
+        for(var i=0;i<iconEyes.length;i++){
+            var iconEye = iconEyes[i];
+            iconEye.onclick = function(){
+                iconEye.classList.toggle('open');
+                var modalMK = this.previousElementSibling && this.previousElementSibling.classList.contains('modalMK') ;
+                console.log(modalMK);
+                var modalMKRegis = this.previousElementSibling && this.previousElementSibling.classList.contains('modalMKRegis') ;
+                var modalNLMK = this.previousElementSibling && this.previousElementSibling.classList.contains('modalNLMK') ;
+                if(iconEye.classList.contains('open')){
+                    this.classList.add('ti-hand-point-left');
+                    if(modalMK){
+                        document.getElementById("modalMK").setAttribute("type","text");
+                    }
+                    else if(modalMKRegis){
+                        document.getElementById("modalMKRegis").setAttribute("type","text");
+                    }else{
+                        document.getElementById("modalNLMK").setAttribute("type","text");
+                    }
+
+                }else{
+                    this.classList.remove('ti-hand-point-left');
+                    if(modalMK){
+                        document.getElementById("modalMK").setAttribute("type","password");
+                    }
+                    else if(modalMKRegis){
+                        document.getElementById("modalMKRegis").setAttribute("type","password");
+                    }else{
+                        document.getElementById("modalNLMK").setAttribute("type","password");
+                    }
+                }
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

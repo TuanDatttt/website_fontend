@@ -1,0 +1,6 @@
+/* Chỉ riêng màn hình max-width là <=  còn min-width là >= */
+@media screen and (max-width: 1024px) {
+    h1 {
+        color: red;
+    }
+}

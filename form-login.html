@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Common -->
+    <!-- Private -->
+    <link rel="stylesheet" href="./assets/css/form-login.css">
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="margin-8 wapper">
+        <div class="title-close">
+            <a href="./index.html" class="ti-close"></a>
+        </div>
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-control">
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slide-table"></div>
+            </div>
+            <div class="form-inner">
+                <form action="#" id="formLogin" class="login">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email@gmail.com">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group" >
+                        <label for="loginPassword" class="form-label">Mật khẩu</label>
+                        <input type="password" name="loginPassword" id="loginPassword" placeholder="Mật khẩu ...">
+                        <div class="eye">
+                            <i class="ti-eye login-icon"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="pass-link"><a href="#">Forgot password ?</a></div>
+                    <div class="form-group">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">Not a member ? <a href="">Signup Now</a></div>
+                </form>
+
+                <form action="#" id="formSignup" class="signup">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Tên đầy đủ</label>
+
+                        <input type="text" name="fullName" id="fullName" placeholder="Họ và tên ... ">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email@gmail.com">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" name="password" id="password" placeholder="Mật khẩu ...">
+                        <div class="eye">
+                            <i class="ti-eye signup-icon"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confimPassword" class="form-label">Nhập lại mật khẩu</label>
+                        <input type="password" name="confimPassword" id="confimPassword" placeholder="Nhập Lại Mật khẩu ...">
+                        <div class="eye">
+                            <i class="ti-eye confirm-icon"></i>
+                        </div>
+                        <span class="form-message"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        // const signupText = document.querySelector(".title-text .singup");
+        const loginForm = document.querySelector("form.login");
+        // const signupForm = document.querySelector("form.signup");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector(".signup-link a");
+
+        signupBtn.onclick = function(){
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+        }
+        loginBtn.onclick = function () {
+            loginForm.style.marginLeft = "0";
+            loginText.style.marginLeft = "0";
+        }
+        signupLink.onclick = function (event) {
+            // thực hiện signunBtn.onlick
+            signupBtn.click();
+            // Huỷ sự kiện
+            event.preventDefault ()
+        }
+    </script>
+
+    <!-- Link Javascript -->
+    <script src="./assets/js/form-login.js"></script>
+    <!-- F8-Javascript Viết Js cho Validator -->
+    <script>
+        Validator({
+            form: '#formSignup',
+            formGroupSelector : '.form-group',
+            errorSelector : '.form-message',
+            rules: [
+                // Text dùng isRequire
+                Validator.isRequired('#fullName'),
+                Validator.isEmail('#email'),
+                Validator.isPassword('#password'),
+                Validator.isConfimPassword('#confimPassword',function () {
+                    // lấy value của input password
+                    return document.querySelector('#formSignup #password').value;
+                }),
+
+            ],
+            onSubmit: function (data) {
+                // Call API trong này . Cần tìm hiểu <3
+                console.log(data);
+            }
+        });
+        Validator({
+            form: '#formLogin',
+            formGroupSelector : '.form-group',
+            errorSelector : '.form-message',
+            rules: [
+               Validator.isEmail('#email'),
+               Validator.isLoginPassword('#loginPassword',function () {
+                    return 'Nguyendat2';
+               }),
+            ]
+        });
+    </script>
+
+    <!-- Tắt mở ti-eye -->
+    <script>
+        // icon eye login
+        const  elementIcon= document.querySelector('.eye .login-icon');
+        elementIcon.addEventListener('click',function (e) {
+            elementIcon.classList.toggle('open');
+
+            if(elementIcon.classList.contains('open')){
+                elementIcon.classList.remove('ti-eye');
+                elementIcon.classList.add('ti-hand-point-left');
+                document.getElementById('loginPassword').setAttribute("type","text");
+
+            }else{
+                elementIcon.classList.remove('ti-hand-point-left');
+                elementIcon.classList.add('ti-eye');
+                document.getElementById('loginPassword').setAttribute("type","password");
+            }
+            e.preventDefault();
+        })
+        // icon eye signup
+        const  signupIcon= document.querySelector('.eye .signup-icon');
+        signupIcon.addEventListener('click',function (e) {
+
+            signupIcon.classList.toggle('open');
+            if(signupIcon.classList.contains('open')){
+                signupIcon.classList.remove('ti-eye');
+                signupIcon.classList.add('ti-hand-point-left');
+                document.getElementById('password').setAttribute("type","text");
+            }else{
+                signupIcon.classList.remove('ti-hand-point-left');
+                signupIcon.classList.add('ti-eye');
+                document.getElementById('password').setAttribute("type","password");
+            }
+            e.preventDefault();
+        });
+         // icon eye confirm password
+         const  confirmpwIcon= document.querySelector('.eye .confirm-icon');
+         confirmpwIcon.addEventListener('click',function (e) {
+
+            confirmpwIcon.classList.toggle('open');
+            if(confirmpwIcon.classList.contains('open')){
+                confirmpwIcon.classList.remove('ti-eye');
+                confirmpwIcon.classList.add('ti-hand-point-left');
+                document.getElementById('confimPassword').setAttribute("type","text");
+            }else{
+                confirmpwIcon.classList.remove('ti-hand-point-left');
+                confirmpwIcon.classList.add('ti-eye');
+                document.getElementById('confimPassword').setAttribute("type","password");
+            }
+            e.preventDefault();
+        });
+</script>
+</body>
+</html>
